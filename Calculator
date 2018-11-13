@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+
+public class calculatorviaswitch {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Input first number: ");
+        double num1 = sc.nextDouble();
+        
+        System.out.print("Input second number: ");
+        double num2 = sc.nextDouble();
+        
+        System.out.print("Input arithmetic operator: (+ , - , * , / , %) ");
+        String optr = sc.next();
+        
+         
+        
+
+        
+        switch (optr) {
+            case ("+"):
+            case ("add"):{
+                System.out.println(num1 + num2);
+                break;
+            }
+                
+                
+                
+            case ("-"):
+            case ("subtract"):{
+                System.out.println(num1 - num2); 
+                break;
+            }
+                
+                
+            case ("*"):
+            case ("multiply"):{
+                System.out.println(num1 * num2);
+                break;
+            }
+                
+                
+            case ("/"):
+            case ("devide"):{
+                System.out.println(num1 / num2);
+                break;
+            }
+                
+                
+            case ("%"):
+            case ("modulo"):{
+                System.out.println(num1 % num2);
+                break;
+            }
+                
+                
+            default: {
+                System.out.println("Syntax Error!");
+                break;
+            }
+
+                
+                
+        }
+        
+    
+
+        
+        
+    }
+    
+}
