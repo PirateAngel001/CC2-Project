@@ -1,0 +1,50 @@
+
+package guesswhat.number;
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class GuessWhatNumber {
+
+
+    public static void main(String[] args) {
+        Random eur = new Random();
+        int numberToGuess = eur.nextInt(1000);
+        int numberOfTries = 0;
+        Scanner eu = new Scanner (System.in);
+        int guess;
+        numberToGuess = 10;
+        boolean win = false;
+        
+        while (win == false) {
+            
+            System.out.println("Guess a number between 1 to 1000: ");
+            guess = eu.nextInt();
+            numberOfTries++;
+            if (guess == numberToGuess) {
+                win = true;
+                System.out.println("Correct number!");
+            }
+            else if(guess < numberToGuess) {
+                System.out.println("Your guess is too low, try again.");
+                    if (numberToGuess % 2 == 0)
+                        System.out.println("HINT : Your number is even");
+                    
+                
+            }
+            else if (guess > numberToGuess) {
+                System.out.println("Your guess is too high, try again.");
+                    if (numberToGuess % 2 == 0)
+                        System.out.println("HINT : Your number is even");
+
+                    
+        
+            }
+        }
+        System.out.println("You win! Congratulations!");
+        System.out.println("The number was " + numberToGuess);
+        System.out.println("It took you " + numberOfTries + " tries");
+        
+        
+    }
+}
